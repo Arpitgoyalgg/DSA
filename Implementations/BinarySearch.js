@@ -1,4 +1,4 @@
-const arrToFind = [5,10,15,20,21,22,22,22,222,222222]
+const arrToSearchIn = [5,10,15,20,21,22,22,22,222,222222]
 
 
 function BinarySearch(arr,element) {
@@ -24,4 +24,4 @@ function BinarySearch(arr,element) {
     return -1
 }
 
-console.log(BinarySearch(arrToFind,222))
+console.log(BinarySearch(arrToSearchIn,222))
