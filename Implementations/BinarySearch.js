@@ -1,7 +1,8 @@
 const arrToSearchIn = [5,10,15,20,21,22,22,22,222,222222]
 
+// Iterative
 
-function BinarySearch(arr,element) {
+function binarySearchIterative(arr,element) {
     
     let start = 0
     let end = arr.length - 1
@@ -24,4 +25,22 @@ function BinarySearch(arr,element) {
     return -1
 }
 
-console.log(BinarySearch(arrToSearchIn,222))
+// Recursive
+
+function binarySearchRecursive(arr, val, start = 0, end = arr.length - 1) {
+    const mid = Math.floor((start + end) / 2);
+  
+    if (val === arr[mid]) {
+      return mid;
+    }
+  
+    if (start >= end) {
+      return -1;
+    }
+  
+    return val < arr[mid]
+      ? binarySearch(arr, val, start, mid - 1)
+      : binarySearch(arr, val, mid + 1, end);
+  }
+
+console.log(binarySearchIterative(arrToSearchIn,222))
